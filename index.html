@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.container {
+    background-color: black;
+    height: 600px;
+    position: relative;
+    
+}
+.earth {
+background-color: rgb(57, 57, 206);
+height: 100px;
+width: 100px;
+border-radius: 50%;
+
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+
+
+}
+
+.moon {
+    background-color: white;
+    width:30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(100px); 
+    animation-duration: 5s;
+animation-name: revolution;
+}
+    
+  
+    @keyframes revolution {
+  0%   { transform: rotate(0deg) translate(100px)}
+  100% { transform: rotate(360deg) translate(100px) } 
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="earth"></div>
+        <div class="moon"></div>
+    </div>
+</body>
+</html>
